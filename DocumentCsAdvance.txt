@@ -1,0 +1,214 @@
+# Nội dung cần tìm hiểu: 
+# Anonymous Types
+Trong C #, kiểu ẩn danh là một kiểu (lớp) không có bất kỳ tên nào có thể chứa các thuộc tính chỉ đọc công khai. 
+Nó không thể chứa các thành viên khác, chẳng hạn như trường, phương thức, sự kiện, v.v.
+# Anonymous type có thể được xác định bằng cách sử dụng từ khóa new và cú pháp khởi tạo đối tượng object initializer. 
+Khai báo biến kiểu ngầm định với từ khóa var được sử dụng để giữ một anonymous type.
+# Anonymous type là loại tham chiếu (reference type) và tất cả các thuộc tính là chỉ đọc (read-only).
+# Phạm vi của một anonymous type là cục bộ (local), là trong phạm vi của phương thức định nghĩa ra nó.
+# Anonymous types là các class types xuất phát trực tiếp từ object và không thể truyền sang bất kỳ loại nào ngoại trừ object.
+
+
+# Ternary Operator ? :
+
+# Func Delegate
+#  Func là kiểu đại biểu được tích hợp sẵn.
+#  Kiểu đại biểu của hàm phải trả về một giá trị.
+#  Kiểu đại biểu hàm có thể có từ 0 đến 16 tham số đầu vào.
+#  Func Delegate không cho phép tham số ref và out.
+#  Kiểu đại biểu hàm có thể được sử dụng với một phương thức ẩn danh hoặc biểu thức lambda.
+
+# Action Delegate
+# Ưu điểm của Action and Func Delegates
+#  Dễ dàng và nhanh chóng để xác định các đại biểu.
+#  Làm cho mã ngắn.
+#  Loại tương thích trong toàn bộ ứng dụng.
+# Những điểm cần nhớ:
+#  Action delegate giống như  func delegate ngoại trừ nó không trả về bất kỳ thứ gì. Loại trả lại phải vô hiệu.
+#  Action delegate có thể có 0 đến 16 tham số đầu vào.
+#  Action delegate có thể được sử dụng với các anonymous methods hoặc lambda expressions..
+
+# Anonymous method
+Như tên cho thấy, một phương thức ẩn danh là một phương thức không có tên. 
+Các phương thức ẩn danh trong C # có thể được định nghĩa bằng cách sử dụng từ khóa ủy quyền và có thể được gán cho một biến kiểu ủy quyền.
+
+# Extension Method
+#  Các phương thức mở rộng là các phương thức tùy chỉnh bổ sung mà ban đầu không được bao gồm trong lớp.
+#  Các phương thức mở rộng có thể được thêm vào các lớp, cấu trúc hoặc giao diện tùy chỉnh, .NET Framework hoặc bên thứ ba.
+#  Tham số đầu tiên của phương thức tiện ích mở rộng phải thuộc loại mà phương thức tiện ích mở rộng có thể áp dụng, đứng trước từ khóa this.
+#  Các phương thức mở rộng có thể được sử dụng ở bất kỳ đâu trong ứng dụng bằng cách bao gồm không gian tên của phương thức mở rộng.
+
+# HttpClient
+# GetAsync
+Gửi yêu cầu GET tới Uri được chỉ định dưới dạng hoạt động không đồng bộ.
+# GetByteArrayAsync
+Gửi một yêu cầu GET đến Uri được chỉ định và trả về phần thân phản hồi dưới dạng một mảng byte trong một hoạt động không đồng bộ.
+# GetStreamAsync
+Gửi yêu cầu GET tới Uri được chỉ định và trả về phần thân phản hồi dưới dạng một luồng trong hoạt động không đồng bộ.
+# GetStringAsync
+Gửi yêu cầu GET đến Uri được chỉ định và trả về phần thân phản hồi dưới dạng một chuỗi trong hoạt động không đồng bộ.
+# PostAsync
+Gửi yêu cầu POST đến Uri được chỉ định dưới dạng hoạt động không đồng bộ.
+# PostAsJsonAsync
+Gửi yêu cầu POST dưới dạng hoạt động không đồng bộ tới Uri được chỉ định với giá trị đã cho được tuần tự hóa dưới dạng JSON.
+# PostAsXmlAsync
+Gửi yêu cầu POST dưới dạng hoạt động không đồng bộ tới Uri được chỉ định với giá trị đã cho được tuần tự hóa dưới dạng XML.
+# PutAsync
+Gửi yêu cầu PUT đến Uri được chỉ định dưới dạng hoạt động không đồng bộ.
+# PutAsJsonAsync
+Gửi yêu cầu PUT dưới dạng hoạt động không đồng bộ tới Uri được chỉ định với giá trị đã cho được tuần tự hóa dưới dạng JSON.
+# PutAsXmlAsync
+Gửi yêu cầu PUT dưới dạng hoạt động không đồng bộ tới Uri được chỉ định với giá trị đã cho được tuần tự hóa dưới dạng XML.
+# DeleteAsync
+Gửi yêu cầu XÓA tới Uri được chỉ định dưới dạng hoạt động không đồng bộ.
+
+# Lớp HttpClient được sử dụng để gửi truy vấn HTTP (Http Request Message - Request) và nhận phản hồi Response (Http Response Message) từ các truy vấn đó. 
+Lớp này thuộc namespace System.Net.Http, namespace này chứa các lớp giúp tạo ra sự liên lạc giữa client và server
+
+# Để tạo ra truy vấn GET tới một địa chỉ URL, thực hiện phương thức GetAsync(url), 
+đây là phương thức async khi kết thúc nó trả về đối tượng HttpResponseMessage. 
+Từ đối tượng này ta sẽ biết kết quả truy vấn, và ta có thể đọc được dữ liệu tải về.
+# // Khởi tạo http client
+var httpClient = new HttpClient();
+
+# // Thiết lập các Header nếu cần
+httpClient.DefaultRequestHeaders.Add("Accept", "text/html,application/xhtml+xml+json");
+
+# // Thực hiện truy vấn GET
+HttpResponseMessage response = await httpClient.GetAsync(url);
+# ReadAsStreamAsync và ReadAsByteArrayAsync đọc nội dung
+Ở ví dụ trên, đã dùng ReadAsStringAsync để đọc content convert thành chuỗi (string). 
+Ngoài ra, cũng có thể sử dụng ReadAsStreamAsync để tạo stream để đọc kết quả và sử dụng ReadAsByteArrayAsync để đọc hết các byte (mảng các byte) trong content.
+# Ngoài phương thức GetAsync gửi Request với phương thức GET ở trên ra, có thể dùng phương thức SendAsync (hoặc Send nếu sử dụng code đồng bộ synchronous).
+# Phương thức này có tham số kiểu HttpRequestMessage chứa các thông tin về một HTTP Request sẽ gửi đi (xem thêm HTTP Request), 
+giúp tùy biến, thêm được nhiều thông tin khi gửi request hơn. 
+# Ví dụ tạo Request:
+# var httpRequestMessage = new HttpRequestMessage();
+# httpRequestMessage.Method = HttpMethod.Post;
+# httpRequestMessage.RequestUri = new Uri("https://xuanthulab.net");
+# Sau khi tạo được HttpRequestMessage có thể thiết lập nhiều thông tin như, 
+thiết lập method với thuộc tính Method (giá trị GET, POST, DELETE ...), 
+thiết lập địa chỉ truy vấn với thuộc tính RequestUri, thiết lập Content của truy vấn với Content ...
+
+# Sau đó có thể thực hiện truy vấn để trả về HttpResponseMessage: 
+var response = await httpClient.SendAsync(request);
+
+# Anonymous Method
+Phương thức nặc danh (Anonymous Method) trong C# cung cấp một kỹ thuật để truyền một khối code như là một tham số delegate. 
+Các phương thức nặc danh là các phương thức không có tên, chỉ có thân phương thức.
+Không cần xác định kiểu trả về trong một phương thức nặc danh.
+Nó được suy ra từ lệnh return bên trong thân phương thức nặc danh đó.
+# Tạo một Phương thức nặc danh trong C#
+Các phương thức nặc danh (Anonymous Method) trong C# được khai báo với việc tạo instance của Delegate đó,
+với một từ khóa delegate. 
+# Ví dụ:
+# delegate void NumberChanger(int n);
+
+# NumberChanger nc = delegate(int x)
+# {
+#    Console.WriteLine("Phuong thuc nac danh: {0}", x);
+# };
+
+# Các phương thức ẩn danh có thể truy cập các biến được xác định trong một hàm bên ngoài.
+# Anonymous methods can be used as event handlers
+
+# Delegate là gì?
+#  Delegate trong C# tương tự như con trỏ hàm trong C hoặc C++.
+#  Delegate là một biến kiểu tham chiếu(references) chứa tham chiếu tới một phương thức.
+
+# Delegate thường được dùng để triển khai các phương thức hoặc sự kiện call-back.
+Bạn cứ hiểu Delegate là một biến bình thường, biến này chứa hàm mà bạn cần gọi. Sau này lôi ra sài như hàm bình thường. Giá trị của biến Delegate lúc này là tham chiếu đến hàm. Có thể thay đổi runtime khi chương trình đang chạy.
+# Delegate được dẫn xuất từ lớp System.Delegate trong C#.
+
+# Khai báo Delegate
+delegate <kiểu trả về> <tên delegate> (<danh sách tham số nếu có>);
+# Lưu ý: Chữ delegate viết thường
+# Khởi tạo và sử dụng Delegate trong C#
+#  Khi kiểu Delegate được khai báo, đối tượng Delegate phải được tạo với từ khóa new và được tham chiếu đến một phương thức cụ thể. 
+Phương thức này phải cùng kiểu trả về và tham số đầu vào với Delegate đã tạo.
+
+#  Khi tạo một Delegate, tham số được truyền với biểu thức new được viết tương tự như một lời gọi phương thức, 
+nhưng không có tham số tới phương thức đó. Tức là chỉ truyền tên hàm vào thôi. Delegate sẽ tự nhận định hàm được đưa vào có cùng kiểu dữ liệu trả ra và cùng tham số đầu vào hay không.
+
+# Ví dụ:
+# private delegate int Add(int x, int y);
+# private delegate void WriteMessage(string message);
+
+# Vậy Delegate bản chất chỉ là một biến thay thế cho hàm, biến này tham chiếu đến hàm nó muốn tham chiếu để thay thế khi dùng. Cách dùng y như gọi một hàm.
+
+# Delegate được sử dụng nhiều nhất trong:
+
+#   Lập trình hướng sự kiện - lập trình Window Forms, WPF
+#   LINQ
+#   Validate dữ liệu
+
+# Event
+# Event là Delegate với mục đích để cho lớp khác hoặc đối tượng cha của đối tượng hiện tại ủy thác(định nghĩa) hàm vào trong đó.
+# Mục đích chính của chuyện này là để thông báo lên cho đối tượng cha biết mà xử lý.
+
+# Khai báo Event trong C#
+Khai báo Event trong C# sẽ tương tự như khai báo một biến. Nhưng biến này sẽ nhận kiểu dữ liệu là Delegate đã được tạo trước đó. 
+Cần có từ khóa event để chương trình biết đây là một biến event.
+# Công thức:
+event <Kiểu delegate> <tên event>;
+# Ví dụ:
+event UpdateNameHandler NameChanged;
+
+# Event chuẩn .Net là event với Delegate nhưng thỏa mãn các điều kiện:
+# Delegate có kiểu trả về là void
+# Delegate có hai tham số, tham số thứ nhất có kiểu dữ liệu là object, tham số thứ hai có kiểu EventArgs. object chính là đối tượng phát sinh sự kiện, EventArgs chính là class giữ thông tin mà đối tượng gửi kèm trong quá trình phát sinh sự kiện.
+Lúc này thay vì chúng ta dùng Delegate do chúng ta tự tạo thì .Net có sẵn Delegate tên là EventHandler theo chuẩn ở trên.
+
+# Generic là gì?
+Nếu bạn đã từng học LẬP TRÌNH C++ thì chắc hẳn bạn đã từng biết tới khái niệm Template (hay còn gọi là mẫu).
+
+# Template được dùng để tạo ra các lớp, các hàm mà không cần quan tâm đến đối số kiểu dữ liệu là gì. Template được đưa ra với mục đích tăng tính tái sử dụng lại mã nguồn.
+
+# Generic là gì?
+Nếu bạn đã từng học LẬP TRÌNH C++ thì chắc hẳn bạn đã từng biết tới khái niệm Template (hay còn gọi là mẫu).
+
+# Template được dùng để tạo ra các lớp, các hàm mà không cần quan tâm đến đối số kiểu dữ liệu là gì. Template được đưa ra với mục đích tăng tính tái sử dụng lại mã nguồn.
+
+# Đặc điểm của Generic
+# Giúp định nghĩa một thao tác dữ liệu với kiểu dữ liệu chung nhất nhìn hạn chế viết code và tái sử dụng.
+
+# Ứng dụng phổ biến nhất của Generic là tạo ra các Generic Collections.
+
+# Ở những bài học trước ta đã tìm hiểu các Collections phổ biến thì nếu các bạn để ý giá trị lưu trữ bên trong đều là object.
+# Điều này gây rất nhiều khó khăn nếu như ta muốn quản lý 1 danh sách có cùng kiểu. 
+# Vì object có thể chứa được mọi kiểu dữ liệu nên ta khó kiểm soát rằng việc thêm phần tử có phải cùng kiểu dữ liệu ta mong muốn hay không.
+# Từ đó Generic Collections ra đời để giúp ta vừa có thể sử dụng được các Collections vừa có thể hạn chế lỗi xảy ra trong quá trình thực thi.
+# Ngoài ra, Generic còn giúp hạn chế truy cập nếu như không truyền đúng kiểu dữ liệu. Điều này sẽ được trình bày trong những bài học sau.
+
+# Trong series này mình sẽ không đào sâu về cách viết Generic mà thay vào đó sẽ giới thiệu cho các bạn một số Generic Collections phổ biến cũng như cách sử dụng chúng.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
