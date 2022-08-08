@@ -131,7 +131,6 @@ namespace OOP
             int s = 5000;
             Product p1 = new Laptop();
             Product p2 = new Iphone();
-            p1.showPrice();
             p1.TestProduct();   
             p2.TestProduct();  
             //Cat cat =new Cat();
