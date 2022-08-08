@@ -128,7 +128,7 @@ namespace OOP
 
         static void Main(string[] args)
         {
-            int s = 508;
+            int s = 2001;
             Product p1 = new Laptop();
             Product p2 = new Iphone();
             p1.showPrice();
