@@ -128,7 +128,7 @@ namespace OOP
 
         static void Main(string[] args)
         {
-
+            int s = 189;
             Product p1 = new Laptop();
             Product p2 = new Iphone();
             
