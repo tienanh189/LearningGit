@@ -128,7 +128,7 @@ namespace OOP
 
         static void Main(string[] args)
         {
-            int s = 5000;
+            int s = 5000adsa;
             string str = "Le Tien Anh";
             Product p1 = new Laptop();
             Product p2 = new Iphone();
