@@ -128,8 +128,8 @@ namespace OOP
 
         static void Main(string[] args)
         {
-            int s = 6000;
-            string str = "Le Tien Anh";
+            int s = 650;
+            string str = "Le Tien Anh1";
             Product p1 = new Laptop();
             Product p2 = new Iphone();
             p1.TestProduct();
