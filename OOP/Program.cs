@@ -135,12 +135,12 @@ namespace OOP
   
             p1.showPrice();
             p1.TestProduct();   
-            p2.TestProduct();  
-            //Cat cat =new Cat();
-            //cat.ShowLegs();
+            p2.TestProduct();
+            Cat cat = new Cat();
+            cat.ShowLegs();
 
-            //cat.Eat();
-            //bool debug = false;
+            cat.Eat();
+            bool debug = false;
 
             //Console.WriteLine("\nLap trinh huong doi tuong trong C#");
             //Console.WriteLine("----------------------------------\n");
