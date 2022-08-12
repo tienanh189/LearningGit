@@ -128,13 +128,13 @@ namespace OOP
 
         static void Main(string[] args)
         {
-            //int s = 1000;
-            //Product p1 = new Laptop();
-            //Product p2 = new Iphone();   
-            //p1.TestProduct();   
-            //p2.TestProduct();  
-            //Cat cat =new Cat();
-            //cat.ShowLegs();
+            int s = 1000;
+            Product p1 = new Laptop();
+            Product p2 = new Iphone();
+            p1.TestProduct();
+            p2.TestProduct();
+            Cat cat = new Cat();
+            cat.ShowLegs();
 
             //cat.Eat();
             //bool debug = false;
